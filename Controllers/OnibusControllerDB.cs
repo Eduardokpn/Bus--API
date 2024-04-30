@@ -42,16 +42,63 @@ namespace BUSAPI.Controllers
     
     }
     
-    [HttpPost]
-
+    [HttpPost("adicionar")]
     public async Task<IActionResult> Add(Onibus novoOnibus)
     {
         try
         
-     { await _context.TB_ONIBUS.AddAsync(novoOnibus);
+     { 
+       await _context.TB_ONIBUS.AddAsync(novoOnibus);
        await _context.SaveChangesAsync();
 
        return Ok(novoOnibus.Id);
+
+     
+     }
+     catch (System.Exception ex)
+     {
+        return BadRequest(ex.Message);
+     }
+       
+     }
+
+     [HttpPut("Atualiza")]
+    public async Task<IActionResult> Atualiza(Onibus novoOnibus)
+    {
+        
+    try
+        
+     { 
+
+       _context.TB_ONIBUS.Update(novoOnibus);
+       int linhas = await _context.SaveChangesAsync();
+
+       return Ok(linhas + "A linha foi alterada");
+
+     
+     }
+     catch (System.Exception ex)
+     {
+        return BadRequest(ex.Message);
+     }
+       
+     }
+
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Deletar(int id)
+    {
+        
+    try
+        
+     { 
+
+        Onibus remove = await _context.TB_ONIBUS.FirstOrDefaultAsync(x => x.Id == id);
+
+       _context.TB_ONIBUS.Remove(remove);
+       int linhas = await _context.SaveChangesAsync();
+
+        return Ok("A linha Pertencente ao " + id + " Foi Excluido :(");
 
      
      }

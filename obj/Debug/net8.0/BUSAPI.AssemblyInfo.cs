@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BUSAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fbe7477b8fc17a667868a1e14af602e1d98ebe8a")]
 [assembly: System.Reflection.AssemblyProductAttribute("BUSAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BUSAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

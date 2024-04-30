@@ -22,6 +22,5 @@ namespace BUSAPI.Models
 
         public Situacoes Situacao { get; set; }
 
-        public bool Acessibilidade { get; set; }
     }
 }
