@@ -45,9 +45,9 @@ namespace BUSAPI.Controllers
     [HttpPost("adicionar")]
     public async Task<IActionResult> Add(Onibus novoOnibus)
     {
-        try
-        
+    try  
      { 
+
        await _context.TB_ONIBUS.AddAsync(novoOnibus);
        await _context.SaveChangesAsync();
 
@@ -84,7 +84,7 @@ namespace BUSAPI.Controllers
        
      }
 
-
+/*
     [HttpDelete("{id}")]
     public async Task<IActionResult> Deletar(int id)
     {
@@ -108,7 +108,7 @@ namespace BUSAPI.Controllers
      }
        
      }
-
+*/
      
 
      }
